@@ -39,5 +39,13 @@ Variables and methods can be declared without any modifiers, as in the following
                            this.format=format;
                            }
   
-  Here, the format variable of the Logger class is private
-                           }
+  Here, the format variable of the Logger class is private, so there's no way for other classes to retrieve or set its value
+  directly.
+  
+  So to make this variable available to the outside world, we defined two public methods: getFormat(), which returns 
+  the value of the format, and setFormat(String), which sets its value.
+  
+  <h2>Public Access Modifier - Public</h2>
+  A class, method, constructor, interface declared public can be accessed from any other class. Therefore, fields, 
+  methods, blocks declared inside a public class can be accessed from any other class. Therefore, fields, methods, blocks,
+  declared inside a public class can be accessed from any class belonging to a Java universe.
