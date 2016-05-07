@@ -8,4 +8,30 @@ the Singleton makes sure that only one connection is made or that only one threa
 <h1>Implementing Singletons</h1>
 <h2>Example 1</h2>
 The easiest implementation consists of a private constructor and a field to hold its result, and a static accessor method
-with a name like getInstance();
+with a name like getInstance().
+
+The private field can be assigned from within a static initializer block or more simply, using an initializer.
+The getInstance() method (which must be public) then simply returns this instance.
+
+                         public class Singleton {
+                          private static Singleton singleton = new Singleton();
+                          
+                          /*
+                          A private constructor prevents any other class from instantiating
+                          */
+                          private Singleton(){}
+                          
+                          /* Static instance method */
+                          public static Singleton getInstance(){
+                          }
+                          
+                          /*Other methods protected by singleton-ness*/
+                          protected static void demoMethod(){
+                          System.out.println("demoMethod for singleton");
+                           }
+                          }
+                          
+  Here is the main program file where we will create the singleton object:
+  
+                        public class SingletonDemo{
+                         public 
