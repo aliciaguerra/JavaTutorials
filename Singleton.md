@@ -34,4 +34,30 @@ The getInstance() method (which must be public) then simply returns this instanc
   Here is the main program file where we will create the singleton object:
   
                         public class SingletonDemo{
-                         public 
+                         public static void main(String args[]){
+                         Singleton tmp = Singleton.getInstance();
+                         tmp.demoMethod();
+                          }
+                         }
+                         
+<h2>Example 2</h2>   
+Following implementation shows a classic singleton design pattern:
+
+                           public class ClassicSingleton {
+                            private static ClassicSingleton(){
+                            //exists only to defeat instantiation
+                            }
+                            public static ClassicSingleton getInstance(){
+                            if(instance==null){
+                            instance=new Classic Singleton();
+                            }
+                            return instance;
+                             }
+                            }
+                            
+The ClassicSingleton class maintains a static reference to the lone singleton instance and returns that reference from
+the static getInstance().
+
+Here, ClassicSingleton class employs a technique known as lazy instantiation to create the singleton; as a result, 
+the Singleton instance is not created until the getInstance() method is called the first time. This instance ensures
+that singleton instances are created only when needed.
