@@ -52,3 +52,11 @@ If you want to put quotes within quotes, you must use the escape sequence, \" on
   <h2>Character Methods</h2>
   Here is the list of important instance methods that all the subclasses of the Character class implement:
   
+  - isLetter() determines whether specified char value is a letter
+  - isDigit() determines whether specified char value is a digit
+  - isWhiteSpace() determines whether the specified char value is whitespace
+  - isUpperCase() determines whether the specified char value is uppercase
+  - isLowerCase() determines whether the specified char value is lowercase
+  - toString() returns a String object representing the specified character value, that is, a one-character string
+  
+
