@@ -55,4 +55,23 @@ keyword.
 <h2>double</h2>
 - double data type is a double precision 64-bit IEEE 754 floating point.
 - the data type is generally used as the default data type for decimal values, generally the default choice
+- double data type should never be used for precise values such as currency
+- Default value is 0.0d
+- Example: double d1 = 123.4
 
+<h2>boolean</h2>
+- boolean data type represents one bit of information
+- there are only two possible values: true or false
+- this data type is used for simple flags that true/false conditions
+- default value is false
+- example: boolean one=true
+
+<h2>char</h2>
+- char data type is a single 16-bit Unicode character
+- Minimum value is '\u0000' (or 0)
+- Maximum value is '\uffff' (or 65,535 inclusive)
+- char data type is used to store any character
+- Example: char letter A = 'A'
+
+<h2>Reference Data Types</h2>
+- Reference variables are created using defined constructors of the classes.
