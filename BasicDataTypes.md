@@ -74,4 +74,56 @@ keyword.
 - Example: char letter A = 'A'
 
 <h2>Reference Data Types</h2>
-- Reference variables are created using defined constructors of the classes.
+- Reference variables are created using defined constructors of the classes. They are used to access objects.
+  These variables are declared to be of a specific type that cannot be changed. For example, Employee, Puppy, etc.
+- Class objects, and various types of array variables come under reference data type.
+- Default value of any reference variable is null. 
+- A reference variable can be used to refer to any object of the declared type or any compatible type.
+- Example: Animal animal = new Animal("giraffe");
+
+<h2>Java Literals</h2>
+A literal is a source code representation of a fixed value. They are represented directly in the code without any
+computation.
+
+Literals cannot be assigned to any primitive value variable. For example:
+
+                    byte a = 68;
+                    char a = 'A'
+                    
+byte, int, long, and short can be expressed in decimal(base 10), hexidecimal(base 16), or octal(base 8) number systems
+as well.
+
+Prefix 0 is used to indicate octal and prefix 0x indicates hexidecimal when using these number systems for literals.
+For example:
+
+                  int decimal = 100;
+                  int octal = 0144;
+                  int hexa = 0x64;
+                  
+String literals in Java are specified like they are in most other languages by enclosing a sequence of characters
+between a pair of double quotes. Examples of String literals are:
+
+                  "Hello World"
+                  "two\nlines"
+                  "\This is in quotes\"
+                  
+String and char types of literals contain any Unicode characters. For example:
+
+                  char a = '\u0001';
+                  String a = "\u0001";
+                  
+Java language supports few special escape sequences for String and char literals as well. They are:
+
+- \n Newline (0x0a)
+- \r Carriage return (0x0d)
+- \f Formfeed (0x0c)
+- \b Backspace (0x08)
+- \s Space (0x20)
+- \t Tab
+- \" Double Quote
+- \' Single quote
+- \\ backslash
+- \ddd Octal character (ddd)
+- \uxxxx Hexidecimal Unicode Character (xxxx)
+
+
