@@ -37,3 +37,15 @@ Here is the list of other methods (Except set methods) which are very similar to
 - void getChars(int srcBegin, int srcEnd, char[] dst, int dstBegin) Characters are copied from this StringBuffer into the
   destination character array dst
 - int indexOf(String str) Returns the index within this String of the first occurence of the specified String.
+- int indexOf(String str, int fromIndex) Returns the index within the string at the first occurrence of the specified   
+  substring, starting at the specified index
+- int lastIndexOf(String str) Returns the index within this string of the rightmost occurrence of the specified substring.
+- int lastIndexOf(String str, int fromIndex) Returns the index within this string of the last occurence of the specified
+  substring
+- int length() Returns the length (character count) of this string buffer
+- void setCharAt(int index, char ch) The character at the specified index of this string buffer is set to char
+- void setLength(int newLength) Sets the length of this StringBuffer
+- CharSequence subSequence(int start, int end) Returns a new character sequence that is a subsequence of this sequence
+- String subString(int start) Returns a new String that contains a subsequence of characters currently contained in this
+  StringBuffer
+- String toString() Converts a String representing the data in this string buffer
