@@ -17,3 +17,15 @@ EXAMPLE
                       System.out.println(Str1.regionMatches(11, Str2, 0, 9));
                       
                       System.out.println("Return Value:");
+                      System.out.println(Str1.regionMatches(11, Str3, 0, 9));
+                      
+                      System.out.println("Return Value");
+                      System.out.println(Str1.regionMatches(true, 11, Str3, 0, 9));
+                       }
+                      }
+
+RESULT
+
+                       Return Value: true
+                       Return Value: false
+                       Return Value: true
