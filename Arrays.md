@@ -53,5 +53,62 @@ reference to myList:
 Following picture represents array myList. Here, myList holds ten double values and the indices are from 0 to 9.
 
 <h2>Processing Arrays</h2>
+When processing array elements, we often use either for loop or foreach loop because all of the elements in an array
+are of the same type and the size of the array is known.
+
+EXAMPLE
+
+                    public static TestArray {
+                    public static void main(String args[]) {
+                    double[] myList = {1.9, 2.9, 3.4, 3.5};
                     
+                    //Print all the array elements
+                    for(int i=0; i<myList.length;i++){
+                    System.out.println(myList[i] + " ");
+                    }
+                    
+                    //Summing all elements
+                    double total = 0;
+                    for(int i=0; i<myList.length; i++) {
+                    total+=myList[];
+                    }
+                    
+                    System.out.println("Total is" + total);
+                    //Finding the largest element
+                    double max = myList[0];
+                    for(int i=1; i<myList.length; i++){
+                    if(myList[i]>max) max=myList[i];
+                    }
+                    System.out.println("Max is"+max);
+                     }
+                    }
+                    
+<h2>For Each Loops</h2>  
+JDK 1.5 introduced a new for loop known as foreach loop or enhanced for loop, which enables you to traverse the complete
+array sequentially without using an index variable.
+
+EXAMPLE
+
+                    public class TestArray {
+                     public static void main(String args[]) {
+                     double[] myList = {1.9, 2.9, 3.4, 3.5};
                      
+                     //print all the array elements
+                     for(double element: myLists) {
+                     System.out.println(element);
+                          }
+                        }
+                      }
+                      
+<h2>Passing Arrays to Methods</h2> 
+Just as you can pass primitive type values to methods, you can also pass arrays to methods. For example, the following 
+method displays the ints in the int array:
+
+                      public static void printArray(int[] array){
+                      for(int i=0; i<array.length; i++) {
+                      System.out.println(array[i] + " ");
+                           }
+                      }
+                      
+You can invoke it by passing an array. For example, the following statement invokes the printArray method to display
+3, 1, 2, 6, 4, and 2:
