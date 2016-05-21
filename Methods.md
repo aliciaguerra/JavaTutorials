@@ -264,6 +264,141 @@ You would call a constructor to initialize objects as follows:
                          }
                     }
                     
-<h2>the this keyword</h2>                    
+<h2>The this Keyword</h2>     
+this is a keyword in Java which is used as a reference to the object of the current class, within an instance method
+or constructor. Using this, you can refer the members of a class such as construtors, variables, and methods.
+Note: The keyword this is only used within instance methods or constructors.
+
+In general, the keyword this is used to:
+- Differentiate the instance variables from local variables if they have the same names, within a constructor or method.
+
+                        class Student{
+                         int age;
+                         Student(int age) {
+                         this.age=age;
+                            }
+                        }
+                        
+- Call one type of constructor (parameterized constructor or default) from other in the class. It is known as explicit 
+  construtor invocation.
+
+                      class Student {
+                       int age
+                       Student() {
+                       this(20);
+                       }
+                      Student(int age) {
+                      this.age = age;
+                              }
+                      }
+                      
+EXAMPLE
+
+Here is an example that uses this keyword to access members of a class. Copy and paste the below given program in a file 
+with name This_Example.java.
+
+                    public class This_Example {
+                    
+                    //Instance variable num
+                    int num=10;
+                    
+                    This_Example() {
+                    System.out.println("This is an example program on keyword this");
+                    }
+                    
+                    This_Example(int num) {
+                    //Invoking the default constructor
+                    this();
+                    
+                    //Assigning the local variable num to the instance variable num
+                    this.num=num;
+                    }
+                    
+                    public void greet(){
+                    System.out.println("Hi Welcome to Tutorialspoint");
+                    }
+                    
+                    public void print() {
+                    //local variable num
+                    int num=20;
+                    
+                    //printing the instance variable
+                    System.out.println("value of local vairable num is:" + num);
+                    
+                    //printing the local variable
+                    System.out.println("value of instance num is:" + this.num);
+                    
+                    //Invokign the greet method of a class
+                    this.greet();
+                    }
+                    
+                    public static void main(String args[]) {
+                    //Instantiating the class
+                    This_Example obj1 = new This_Example();
+                    
+                    //Invoking the print method
+                    obj1.print();
+                    
+                    //Passing a new value to the num variable through a parameterized contrusctor
+                    This_Example obj2 = new This_Example(30);
+                    
+                    //Invoked the print method again
+                    obj2.print();
+                          }
+                    }
+                    
+<h2>Variable Arguments (var-args)</h2>      
+JDK 1.5 enables you to pass a variable number of arguments of the same type to a method. The parameter in the method is
+declared as follows:
+
+                    typeName...parameterName
+                    
+In the method declaration, you specify the type followed by the ellipsis(...) Only the variable-length parameter may be 
+specified in a method, and this parameter must be the last parameter. Any regular parameters must precede it.
+
+EXAMPLE
+
+                    public class VarargsDemo {
+                     public static void main(String args[]) {
+                     //call method with variable args
+                      printMax(34, 3, 3, 2, 56.5);
+                      printMax(new double[] {1,2,3});
+                    }
+                    
+                    public static void printMax(double.. numbers){
+                    if(numbers.length()==0) {
+                     System.out.println("No arguments passed");
+                     return;
+                       }
+                    }
+                    
+RESULT
+
+                    The max value is 56.5
+                    The max value is 3.0
+                    
+<h2>The Finalize() Method</h2>   
+It is possible to define a method that will be called just before an object's final destruction by the garbage collector.
+This method is called finalize(), and it can be used to ensure that an object terminates clearly.
+
+For example, you might use finalize() to make sure that an open file owned by that object is closed.
+
+To add a finalizer to that class, you simply define the finalize() method. The Java runtime calls that method whenever
+it is about to recycle an object of that class.
+
+Inside the finalize method, you will specify those actions that must be performed before an object is destroyed. 
+
+The finalize() method has the general form:
+
+                    protected void finalize() {
+                    //finalize code here
+                    }
+  
+  Here, the keyword protected is a specifier that prevents access to finalize() by code defined outside its class.
+  
+  This means  that you cannot know when or even if finalize() will be executed. For example, if your program ends
+  before garbage collection occurs, finalize() will not execute.
+                    
+                    
 
                            
