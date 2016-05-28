@@ -126,5 +126,108 @@ Asssuming boolean variable A holds true and variable B holds false
 - /=
   Divide and assignment operator, it divides left operand with right operand and assign the result to the left operand.
   C/=A is equivalent to C=C/A
+- %=
+  Modulus and assignment operator, it takes modulus using 2 operands and assigns the result to the left operand
+  C%=A is equivalent to C=C%A
+- <<=
+  Left shift and assignment operator
+  Example: C <<= 2 is the same as C =<< 2
+- >>=
+  Right shift AND assignment operator
+  Example: C>>=2 is the same as C=C>>2
+- &=
+  Bitwise AND assignment operator.
+  C&=2 is same as C=C&2
+- ^=
+  bitwise exclusive OR and assignment operator 
+  Example: bitwise exclusive or and assignment operator
+- |=
+  bitwise inclusive OR and assignment operator
+
+#Conditional Operator (?:)
+Conditional operator is also known as the ternary operator. This operator consists of three operands and is used to evaluate
+boolean expressions. The goal of the operator is to decide which value should be assigned to the variable. 
+
+                       variable x = (expression) ? value if true: value if false
+                       
+Following is the example:
+
+                      public class Test {
+                        public static void main(String args[]) {
+                         int a, b;
+                         a = 10;
+                         b = (a==1) ? 20:30;
+                         System.out.println("Value of b is:" + b);
+                         
+                         b = (a==10) ? 20:30;
+                         System.out.println("Value of b is:" + b);
+                              }
+                        }
+                        
+#instanceOf operator
+The operator is used only for object reference variables. The operator checks whether the object is of a particular 
+type (class type or interface type). instanceOf operator is written as:
+
+                       (Object reference variable) instanceof (class/interface type)
+                       
+If the object referred by the variable on the left side of the operator passes the Is-A check for the class/interface
+type on the right side, then the result be true. Following is true:
+
+                         public class Test {
+                          public static void main(String args[]) {
+                           String name="James";
+                           //following will return true since name is type of String
+                           boolean result = name instanceOf String;
+                           System.out.println(result);
+                               }
+                          }
+                          
+The following would produce the result:
+
+                          true
+                          
+This operator would still return true if the object being compared is the assignment compatible with the type on the
+right. Following is one more example:
+
+                         class Vehicle() {
+                          public class Car extends Vehicle {
+                           public static void main(String args[]) {
+                           Vehicle a = new Car();
+                           boolean result = a instaceof Car;
+                           System.out.println(result);
+                            }
+                         }
+                         
+This would produce the following result:
+
+                          true
+                          
+#Precedence of Java operators
+Operator precedence determines the grouping of terms in an expression. This affects how an expression is evaluated.
+Certain operators have higher precedence than others; for example, the multiplication operator has higher precedence than
+the addition operator. 
+
+For example, x=7+3*2; here x is assigned 13, not 20 because operator * has higher precedence than +, so it first gets
+multiplied with 3*2 and then adds into 7.
+
+Hence, operators with the highest precedence appear at the bottom of the table, those with the lowest appear at the bottom.
+Within an expression, higher precedence operators will be evaluated first.
+
+Category                  Operator                   Associativy
+Postfix               ()[].(dot operator)           left to right
+Unary                 ++--!~                        right to left
+Multiplication        */%                           left to right
+Additive              +-                            left to right
+Shift                 >> >>> <<                     left to right
+Relational            > >= < <=                     left to right
+Equality              == !=                         left to right
+BitWise AND           !                             left to right
+BitWise xOR           ^                             left to right
+Bitwise OR            |                             left to right
+Logical AND           &&                            left to right
+Logical OR            ||                            left to right
+Conditional           ?:                            right to left
+Assignment            = += -= *= /=                 right to left
+
   
 
